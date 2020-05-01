@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">K-means Clustering</div>
+                <img src="{{ url_for('static', filename='images/index/kmeans.jpg') }}" class="card-img-top"
+                    alt="Let's go with K-means">
+                <div class="card-body">
+                    <h5 class="card-title">Gom nhóm K-means</h5>
+                    <p class="card-text">là một phương pháp lượng tử hóa vectơ, ban đầu từ xử lý tín hiệu, nhằm mục đích
+                        phân chia n quan sát thành các cụm k trong đó mỗi quan sát thuộc về cụm với giá trị trung bình
+                        gần nhất, đóng vai trò là nguyên mẫu của cụm. Điều này dẫn đến việc phân vùng không gian dữ liệu
+                        vào các ô Voronoi.</p>
+                    <a href="/kmeans" class="btn btn-primary">Use K-means</a>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">Support Vector Machine</div>
+                <img src="{{ url_for('static', filename='images/index/svm.jpg') }}" class="card-img-top"
+                    alt="Let's go with SVM">
+                <div class="card-body">
+                    <h5 class="card-title">Máy vectơ hỗ trợ</h5>
+                    <p class="card-text">là một khái niệm trong thống kê và khoa học máy tính cho một tập hợp các phương
+                        pháp học có giám sát liên quan đến nhau để phân loại và phân tích hồi quy. SVM dạng chuẩn nhận
+                        dữ liệu vào và phân loại chúng vào hai lớp khác nhau. Do đó SVM là một thuật toán phân loại nhị
+                        phân.</p>
+                    <a href="/svm" class="btn btn-primary">Use SVM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

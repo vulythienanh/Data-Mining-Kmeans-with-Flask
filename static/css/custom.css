@@ -1,0 +1,12 @@
+blockquote{
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+    color: #666;
+}
+
+.footer-copyright{
+    color: #666;
+    text-decoration: none;
+}
