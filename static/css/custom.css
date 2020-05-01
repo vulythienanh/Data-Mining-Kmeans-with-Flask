@@ -1,3 +1,4 @@
+/*Footer*/
 blockquote{
     font-family: 'Merriweather', serif;
     font-style: italic;
@@ -9,4 +10,24 @@ blockquote{
 .footer-copyright{
     color: #666;
     text-decoration: none;
+}
+
+/*Form Upload*/
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-select {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
 }

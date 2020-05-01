@@ -1,0 +1,5 @@
+{% if errors %}
+<p class=error><strong>Error:</strong> {{ errors }}
+{% else %}
+{{data | safe}}
+{% endif %}
