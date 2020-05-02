@@ -1,0 +1,37 @@
+{% extends './base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header text-monospace">
+            <h3>Recommend number of cluster</h3>
+        </div>
+        <div class="card-body">
+            <img src={{url}} alt="Chart" width="100%">
+        </div>
+    </div>
+
+    <div class="card text-center mt-3">
+        <div class="card-header text-monospace">
+            <h3>Type number cluster then clustering</h3>
+        </div>
+        <form id="form" action="result" method="post">
+            <div class="card-body">
+                <p class="card-text">Type number of cluster or Choose according to the system then <span class="badge badge-primary">Continue Clustering</span> button!.</p>
+                <div class="col-md-12 mb-4">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend2">Number of cluster</span>
+                        </div>
+                        <input type="text" class="form-control" id="cluster" name="cluster" value="3" required>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <input type="submit" class="btn btn-primary" value="Continue Clustering">
+            </div>
+        </form>
+        <audio id="audio" src="https://static.xx.fbcdn.net/rsrc.php/yR/r/lvSDckxyoU5.ogg"></audio>
+    </div>
+</div>
+{% endblock %}

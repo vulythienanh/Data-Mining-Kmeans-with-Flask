@@ -23,7 +23,7 @@
         <div class="card-header text-monospace">
             <h3>Select 2 columns then clustering</h3>
         </div>
-        <form id="form" action="result" method="post">
+        <form id="form" action="elbow" method="post">
             <div class="card-body">
                 {%for i in range(0, m)%}
                 <input class="single-checkbox" type="checkbox" name="cot" id="check{{i}}" value={{i}} onclick="play()">
