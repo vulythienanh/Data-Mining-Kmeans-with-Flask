@@ -44,8 +44,10 @@ def kmeans_data():
 
             session['csvfile1'] = file_path #Save path file to session
             data = pd.read_csv(file_path)
+        
+            m = data.shape[1]
 
-            return render_template('kmeans/data.html', data=data.to_html(classes='table table-striped', header=False, index=False))
+            return render_template('kmeans/data.html', data=data.to_html(table_id='myTable', classes='table table-striped', header=True, index=False), m=m)
 
 if __name__ == '__main__':
     app.run(debug=True)

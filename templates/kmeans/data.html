@@ -1,5 +1,48 @@
-{% if errors %}
-<p class=error><strong>Error:</strong> {{ errors }}
-{% else %}
-{{data | safe}}
-{% endif %}
+{% extends './base.html' %}
+
+{% block content %}
+<div class="container">
+    {% if errors %}
+    <div class="alert alert-danger" role="alert">
+        <strong>Error:</strong> <span>{{ errors }}</span> <a href="/kmeans" class="alert-link"> Click here to return
+            to page !</a>
+    </div>
+    {% else %}
+
+    <div class="card">
+        <div class="card-header text-center text-monospace">
+            <h1>Your Dataset</h1>
+        </div>
+        <div class="card-body">
+            {{data|safe}}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="card text-center mt-3">
+        <div class="card-header text-monospace">
+            <h3>Select 2 columns then clustering</h3>
+        </div>
+        <form id="form" action="result" method="post">
+            <div class="card-body">
+                {%for i in range(0, m)%}
+                <input class="single-checkbox" type="checkbox" name="cot" id="check{{i}}" value={{i}} onclick="play()">
+                <label class="single-label" for="check{{i}}">Column: {{i}}</label>
+                {%endfor%}
+            </div>
+            <div class="card-footer text-muted">
+                <input type="submit" class="btn btn-primary" value="Clustering">
+            </div>
+        </form>
+        <audio id="audio" src="https://static.xx.fbcdn.net/rsrc.php/yR/r/lvSDckxyoU5.ogg"></audio>
+    </div>
+
+</div>
+
+<!-- Pagination -->
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+{% endblock %}

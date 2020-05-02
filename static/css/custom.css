@@ -31,3 +31,19 @@ blockquote{
     top: 0;
     opacity: 0;
 }
+
+/*Checkbox*/
+.single-checkbox{
+    height: 18px;
+}
+
+input[type=checkbox], input[type=radio] {
+    padding: 0;
+    width: 20px;
+}
+
+.single-label{
+    color: #666;
+    font-size: 25px;
+    padding-right: 15px;
+}
